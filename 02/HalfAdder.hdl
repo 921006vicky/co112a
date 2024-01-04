@@ -15,6 +15,6 @@ CHIP HalfAdder {
     PARTS:
     // Put you code here:
 
-    Xor(a=a, b=b, out=sum);
-    And(a=a, b=b, out=carry);
+    Xor(a=a, b=b, out=sum);//和
+    And(a=a, b=b, out=carry);//進位
 }
