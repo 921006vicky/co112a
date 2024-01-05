@@ -8,48 +8,25 @@
 
 // Put your code here.
 
-@R0
-D=M
-@value1
-M=D
-
-//Take value in R1 and store it in a variable caled value2
-@R1
-D=M
-@value2
-M=D
-
-//SET R2 to 0
-@R2 
+@2
 M=0
 
-// IF value2 is 0 END THE PROGRAM
-@value2
+(loop)
+@0
 D=M
-@END
-D; JEQ
+@exit
+D;JLE
 
-// Loop. Add value1 to r2 as long as value2 is above 0
-(LOOP)
-
-//Take value in R2, and value1, then add them and store in R2
-@R2
+@1
 D=M
-@value1
-D = D + M
-@R2
-M=D
+@2
+M=M+D
 
-//Reduce value2 by 1
-@value2
+@0
 M=M-1
-D=M
 
-//Loop as long as value2 is > 0
-@LOOP
-D; JGT
+@loop
+0;JMP
 
-//END THE PROGRAM
-(END)
-@END
-0; JMP
+@exit
+0;JMP

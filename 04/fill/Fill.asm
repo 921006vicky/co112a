@@ -24,7 +24,7 @@ D=A
 @R1
 M=D
 
-@temp
+@R2
 M=-1
 
 (LOOP)
@@ -34,26 +34,25 @@ D=M
 D;JEQ
 
 (CONT)
-@temp
+@R2
 D=M
 @R0
 A=M
 M=D
 
 @R0
-M = M+1
+M=M+1
 D=M
 @R1
-D = D-M
+D=D-M
 @START
 D;JEQ
-
 
 @LOOP
 0;JMP
 
 (SWITCH)
-@temp
+@R2
 M=0
 @CONT
 0;JMP
